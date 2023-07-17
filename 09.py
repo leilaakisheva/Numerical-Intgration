@@ -15,26 +15,9 @@ N=10000
 R=3
 r=np.linspace(0, R, N)
 
-"""#**Assignment 9**
-###**Abstract**
-This assignment involves the computation of the mass of a hypothetical spherically-symmetric star using two numerical integration methods: the trapezoidal rule and the Monte Carlo method. The first part of the assignment compares the computational costs of the two methods to achieve a precision of 10^-3. In the second part, the star is assumed to be given in a three-dimensional coordinate system. The 3-dimensional numerical integration is performed using two methods. The results obtained from each method are compared and discussed in terms of their computational cost and accuracy.
-
-###**Introduction**
-In the first part the density function of the star is given in the spherical coordinate system, where r is the distance from the center and the radius of the star is at r = 3. First, I define all the necessary functions and then I use them in order to compute the value of mass using these functions and compare their computational costs.
-
-In the second part the density function is given in rectangular coordinate system. I do the same operations as in the first part.
-
-###**Methods**
-###**Part I**
-"""
 
 def f1(r): #Density function for the Part 1
   return np.exp(-r**3)
-
-"""Mass of the star can be found using the formula:
-$$ M = \int_0^{2\pi} \int_0^\pi \int_0^R f(r) \cdot \sin(\phi) \cdot r^2 \; dr \; d\phi \; d\theta=4 \pi \int_0^R ρ(r) r^2 \; dr = 4 \pi\int_0^R exp(-r^3) r^2 \; dr$$
-So, we should use the trapezoidal rule and MC method for this integral.
-"""
 
 def mass_tr_Sph(f, R,r,N): #mass function with the trapezoidal rule for spherical coordinate system
   dr=r[1]-r[0]
@@ -49,12 +32,6 @@ def mass_mc_Sph(f, R,r,N): #mass function with the Monte-Carlo method for spheri
   y=f(x)*x**2
   mass=4*np.pi*R*np.mean(y)
   return mass
-
-"""###**Part II**
-I used the following integral to evaluate the mass of the star
-$$ M = \int dm =\int \int \int \rho \;dV =\int_{-R}^R \int_{-R}^R \int_{-R}^R f(x,y,z) \; dx \; dy \; dz $$
-So, we should use the trapezoidal rule and MC method for this integral.
-"""
 
 def f2(x,y,z):
   return np.exp(-(x**2+y**2+z**2)**1.5)
