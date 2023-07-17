@@ -1,4 +1,4 @@
-# Numerical-Intgration
+# Numerical-Integration
 
 ## Abstract
 This assignment involves the computation of the mass of a hypothetical spherically-symmetric star using two numerical integration methods: the trapezoidal rule and the Monte Carlo method. The first part of the assignment compares the computational costs of the two methods to achieve a precision of 10^-3. In the second part, the star is assumed to be given in a three-dimensional coordinate system. The 3-dimensional numerical integration is performed using two methods. The results obtained from each method are compared and discussed in terms of their computational cost and accuracy.
