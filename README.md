@@ -19,11 +19,10 @@ So, we should use the trapezoidal rule and MC method for this integral.
 
 Another method
 
-
-###**Part II**
 I used the following integral to evaluate the mass of the star
+
+
 $$ M = \int dm =\int \int \int \rho \;dV =\int_{-R}^R \int_{-R}^R \int_{-R}^R f(x,y,z) \; dx \; dy \; dz $$
-So, we should use the trapezoidal rule and MC method for this integral.
 
 
 ![Screenshot from 2023-07-17 17-02-01](https://github.com/leilaakisheva/Numerical-Intgration/assets/128895782/c63e5243-c1c3-46a6-ac06-f8445443f092)
